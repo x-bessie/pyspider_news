@@ -1,7 +1,7 @@
 # pyspider_news
-###使用Pyspider框架爬取数据
+### 使用Pyspider框架爬取数据
 
-#####安装配置：
+##### 安装配置：
 Anaconda3 5.2.0  ——python3.6
 安装命令：
 `pip install pyspider`
