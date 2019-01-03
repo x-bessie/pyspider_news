@@ -23,7 +23,7 @@ http://docs.pyspider.org/en/latest/
 数据接口来自：https://newsapi.org
 免费使用里面的接口，只要申请一个apikey。自行申请不介绍了。
 
-现在的任务是：爬取上面`articles`里每一个`author,title,url,publishedAt`并把书存入mysql数据库中.
+现在的任务是：爬取上面`articles`里每一个`author,title,url,publishedAt`并把数据存入mysql数据库中.
 
 任务思维：
 1.目标的数据是怎样的数据(格式，类型)？
