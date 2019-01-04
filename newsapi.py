@@ -37,13 +37,15 @@ class Handler(BaseHandler):
 
     @config(age=10 * 24 * 60 * 60)
     def index_page(self, response):  
-        json_result=response.json['articles']
+        json_result=response.json["articles"]
         
-        for x in json_result:
-            author=x['author'],
-            title=x['title'],
-            url=x['url'],
-            publishedAt=x['publishedAt']
+        for i in range(len(response.json["articles"])):
+            dict=response.json["articles"][i]
+            
+            author=dict["author"]
+            title=dict["title"]
+            url=dict["url"]
+            publishedAt=dict["publishedAt"]
             AddOn=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())            
             #print('{} {} {} {} {}\n'.format(author,title,url,publishedAt,AddOn))
             self.add_Mysql(author,title,url,publishedAt,AddOn)
